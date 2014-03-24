@@ -1,7 +1,43 @@
-@(message: String)
-
-@main("Welcome to Play") {
-
-    @play20.welcome(message, style = "Java")
-
-}
+<!doctype html>
+<html lang="ja-jp">
+<head>
+    <meta charset="UTF-8">
+    <title>Co-Drive</title>
+    <link rel="stylesheet" href='@routes.WebJarAssets.at(WebJarAssets.locate("css/bootstrap.min.css"))'/>
+    <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))'></script>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="#">Co-Drive</a></div>
+        <div class="navbar-collapse cooapse">
+            <div class="navbar-form navbar-right"><a class="btn btn-success" href="#">Login</a></div>
+        </div>
+    </div>
+</div>
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <h1>イベント管理をライブする</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h3>エンジニアならでは</h3>
+                <p>エンジニア主体のIT勉強会の管理、運営に特化したサービス。面倒な帳簿や大腸とはおさらばです。</p>
+            </div>
+            <div class="col-md-4">
+                <h3>プルリクを飛ばせ</h3>
+                <p>イベント内容はGithubを使って共有できます。だれかと共同開催する際には、主催のリポジトリにプルリクを飛ばしてマージしてもらいましょう。</p>
+            </div>
+            <div class="col-md-4">
+                <h3>手数を最小限に</h3>
+                <p>僕達は無駄が嫌いです。勉強会参加者、発表者へのリコメンド、スケジュール管理など効率化を目指します。</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-8"><a class="btn btn-primary btn-lg" href="#">イベントを作る</a></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
