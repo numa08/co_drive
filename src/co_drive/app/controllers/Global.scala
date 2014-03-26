@@ -1,6 +1,6 @@
 package controllers
 
-import play.api.{Configuration, Play, GlobalSettings}
+import play.api.{Configuration, GlobalSettings}
 import play.api.mvc.{Results, SimpleResult, RequestHeader}
 import scala.concurrent.Future
 import org.pac4j.oauth.client.GitHubClient
