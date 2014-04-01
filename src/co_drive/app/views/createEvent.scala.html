@@ -1,0 +1,39 @@
+@(navbarButton : Html, loginName : String)
+<!doctype html>
+<html lang="ja-jp">
+<head>
+    <meta charset="UTF-8">
+    <title>Co-Drive</title>
+    <link rel="stylesheet" href='@routes.WebJarAssets.at(WebJarAssets.locate("css/bootstrap.min.css"))'/>
+    <link rel="stylesheet" href='@routes.WebJarAssets.at(WebJarAssets.locate("css/font-awesome.min.css"))'/>
+    <link rel="stylesheet" href='@routes.Assets.at("bootstrap-social/bootstrap-social.css")'>
+    <link rel="stylesheet" href='@routes.Assets.at("stylesheets/main.css")'/>
+    <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))'></script>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header"><a class="navbar-brand" href="#">Co-Drive</a></div>
+        <div class="navbar-collapse cooapse">
+            @navbarButton
+        </div>
+    </div>
+</div>
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <form role="form" action="">
+                    <div class="form-group"><label for="title">タイトル</label><input id="title" class="form-control" type="text"/></div>
+                    <div class="form-group"><label for="repository">リポジトリ</label><input id="repository" class="form-control" type="text"/></div>
+                    <div class="form-group"><label for="date">日時</label><input id="date" class="form-control" type="text"/></div>
+                    <div class="form-group"><label for="capacity">定員</label><input id="capacity" class="form-control" type="text"/></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+</script>
+</html>
