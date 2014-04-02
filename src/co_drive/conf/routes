@@ -5,6 +5,8 @@
 # Home page
 GET     /                           controllers.Application.index
 GET     /event/admin/new            controllers.Application.createEvent
+# Web Api
+POST    /api/create_event           controllers.BackendApi.createEvent
 # Authorication
 GET     /callback                   org.pac4j.play.CallbackController.callback()
 POST    /callback                   org.pac4j.play.CallbackController.callback()

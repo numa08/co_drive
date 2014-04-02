@@ -24,8 +24,9 @@ object Application extends ScalaController{
     Option(getUserProfile(request)).map { p =>
       val avatarUrl = p.getAttribute("avatar_url").toString()
       val screenName = p.getAttribute("login").toString()
+      val token = p.getAttribute("access_token").toString
       val navBar = views.html.githubuserbutton(screenName, avatarUrl)
-      Ok(views.html.createEvent(navBar, screenName))
+      Ok(views.html.createEvent(navBar, screenName, token))
 
     }.getOrElse{
       val urlGitHub = getRedirectAction(request, newSession, "GitHubClient", "/event/admin/new").getLocation

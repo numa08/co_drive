@@ -1,4 +1,4 @@
-@(navbarButton : Html, loginName : String)
+@(navbarButton : Html, loginName : String, accessToken : String)
 <!doctype html>
 <html lang="ja-jp">
 <head>
@@ -8,6 +8,7 @@
     <link rel="stylesheet" href='@routes.WebJarAssets.at(WebJarAssets.locate("css/font-awesome.min.css"))'/>
     <link rel="stylesheet" href='@routes.Assets.at("bootstrap-social/bootstrap-social.css")'>
     <link rel="stylesheet" href='@routes.Assets.at("stylesheets/main.css")'/>
+    <script type='text/javascript' src='@routes.Assets.at("javascripts/event.js")'></script>
     <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))'></script>
 </head>
 <body>
@@ -30,12 +31,10 @@
                     <div class="form-group"><label for="capacity">定員</label><input id="capacity" class="form-control" type="text"/></div>
                 </form>
                 <div class="rule"></div>
-                <button class="btn btn-success" type="submit">作成</button>
+                <button class="btn btn-success" type="submit" id="createButton" onclick="meeting.create('@accessToken')">作成</button>
             </div>
         </div>
     </div>
 </div>
 </body>
-<script type="text/javascript">
-</script>
 </html>
